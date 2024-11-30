@@ -83,7 +83,6 @@ Here’s a breakdown of the dataset fields:
 - The **study hours** for each day were tracked manually. I made sure to log the hours spent on studying LeetCode every day. However, these hours were affected by various factors, such as **abroad travels** and particularly **school exam preparation**.
 - During **exam weeks**, which were the last 15 days of the 45-day period, my study hours and LeetCode progress were noticeably reduced. I had to focus more on my school exams, which meant less time available for LeetCode study.
 - On some days, I couldn’t study at all due to other personal commitments or exhaustion. In such cases, the study hours were recorded as **0**, and I solved **0 problems** on those days.
-- The dataset is intentionally **unsorted** to reflect real-life situations where data points are collected randomly.
 
 ## **Project Plan**
 
