@@ -94,7 +94,6 @@ Here’s a breakdown of the dataset fields:
 ### 2. **Data Preprocessing**
    - Clean and structure the data for analysis.
    - Handle missing or inconsistent values where study hours may have been impacted by travel or other factors.
-   - Shuffle the data to create a realistic, unsorted dataset.
 
 ### 3. **Exploratory Data Analysis (EDA)**
    - Visualize the relationship between `Hours Studied` and `LeetCode Problems Solved` using scatter plots.
@@ -110,7 +109,7 @@ Here’s a breakdown of the dataset fields:
    - Create interactive visualizations using libraries like **Matplotlib** or **Seaborn** to present the findings.
    - Summarize insights and conclusions about the effectiveness of study hours on problem-solving success, particularly during exam weeks.
 
-### 6. **Next Steps (Optional)**
+### 6. **Next Steps **
    - Expand the dataset to include more days or additional features like study type (e.g., theory vs. practice).
    - Explore machine learning models to predict future progress based on past study patterns.
 
