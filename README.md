@@ -4,7 +4,7 @@
 
 ### **Motivation**
 
-The number of lines of code written is often closely tied to the time dedicated to studying and practicing coding. Understanding the relationship between study hours and the amount of code written can offer valuable insights into how consistent effort contributes to coding progress. As someone passionate about improving coding skills, this project aims to explore how **study hours** impact **lines of code written** over time. By analyzing this data, the goal is to identify trends, measure the effectiveness of study patterns, and ultimately provide a foundation for better learning strategies.
+The number of lines of code written is often closely tied to the time dedicated to studying and practicing coding. Understanding the relationship between study hours and the amount of code written can offer valuable insights into how consistent effort contributes to coding progress. As someone passionate about improving coding skills, this project aims to explore how **study hours** impact **lines of code written** over time. By analyzing this data, the goal is to identify trends, measure the effectiveness of study patterns, and ultimately provide a foundation for better learning strategies. I wirte this lines of codes for my react prject: inversense.co
 
 Key questions I aim to answer:
 - Does the number of lines of code written depend on the hours spent studying each day?
