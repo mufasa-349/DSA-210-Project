@@ -28,7 +28,6 @@ Here’s a breakdown of the dataset fields:
    - **Fields**:
      - `Lines of Code Written`: The number of lines of code I wrote each day. On days where I studied for 0 hours, I wrote 0 lines of code.
 
-### **Example Data**:
 
 | Days Studied | Hours Studied | Lines of Code Written |
 |--------------|---------------|-----------------------|
