@@ -2,6 +2,9 @@
 
 ## **Lines of Code Written and Study Hours Analysis**
 
+I GENERATED A POWERPOINT: https://docs.google.com/presentation/d/1XL6vPZkxasu8oRT2VkenyEaxitCe4H3A/edit?usp=sharing&ouid=118372572688524103569&rtpof=true&sd=true
+
+
 ### **Motivation**
 
 The relationship between study hours and the number of lines of code written is a key aspect of understanding coding productivity and progress. This project explores how dedicated study time impacts coding output, using data collected over 45 days. By analyzing this data, the project aims to uncover trends, measure study effectiveness, and create a foundation for better learning strategies. 
