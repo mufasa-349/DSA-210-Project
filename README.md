@@ -1,33 +1,28 @@
-# DSA-210-Project
+# **DSA-210-Project**
 
 ## **Lines of Code Written and Study Hours Analysis**
 
 ### **Motivation**
 
-The number of lines of code written is often closely tied to the time dedicated to studying and practicing coding. Understanding the relationship between study hours and the amount of code written can offer valuable insights into how consistent effort contributes to coding progress. As someone passionate about improving coding skills, this project aims to explore how **study hours** impact **lines of code written** over time. By analyzing this data, the goal is to identify trends, measure the effectiveness of study patterns, and ultimately provide a foundation for better learning strategies. I write related codes for my react project: [inversense.co](https://www.inversense.co)
+The relationship between study hours and the number of lines of code written is a key aspect of understanding coding productivity and progress. This project explores how dedicated study time impacts coding output, using data collected over 45 days. By analyzing this data, the project aims to uncover trends, measure study effectiveness, and create a foundation for better learning strategies. 
 
-Key questions I aim to answer:
-- Does the number of lines of code written depend on the hours spent studying each day?
-- What is the relationship between study time and progress in writing code?
-- Can we predict the number of lines of code written based on the hours studied?
+This analysis is part of my learning journey as a developer, and the results directly relate to my React project: [Inversense](https://www.inversense.co). Through this project, I aim to answer key questions such as:
+- How do study hours influence the number of lines of code written?
+- Can we identify patterns in study time and code-writing progress?
+- Is it possible to predict coding output based on study hours?
 
-### **Dataset Description**
+---
 
-The dataset consists of information I have tracked over **45 days**, capturing the number of hours I studied each day and the corresponding number of lines of code I wrote for my **React project**. The study hours are affected by factors such as **abroad travels**, **school exam weeks**, and other personal commitments. Notably, **the last 15 days** of the 45-day period coincide with exam weeks, during which my study hours and code-writing progress decreased significantly due to the need to focus on school exams.
+### **Dataset Overview**
 
-Here’s a breakdown of the dataset fields:
+The dataset contains daily logs of study hours and lines of code written for a React project over a 45-day period. External factors such as exam weeks and travels have influenced study time, especially in the last 15 days, during which study hours and coding output were significantly reduced.
 
-1. **Study Hours Data**
-   - **Source**: Tracked personally over 45 days.
-   - **Fields**:
-     - `Days Studied`: The number of days (1 through 45).
-     - `Hours Studied`: The number of hours I studied each day, ranging from 0 to 6 hours. On days where I studied for 0 hours, no lines of code were written.
+#### **Data Fields**
+1. **Days Studied**: Sequential day numbers from 1 to 45.
+2. **Hours Studied**: Daily study hours, ranging from 0 to 6. On days with no study hours, no lines of code were written.
+3. **Lines of Code Written**: The number of lines of code written each day, ranging from 0 to 240.
 
-2. **Lines of Code Written Data**
-   - **Source**: Based on my personal progress in my React project.
-   - **Fields**:
-     - `Lines of Code Written`: The number of lines of code I wrote each day. On days where I studied for 0 hours, I wrote 0 lines of code.
-
+#### **Full Dataset**
 
 | Days Studied | Hours Studied | Lines of Code Written |
 |--------------|---------------|-----------------------|
@@ -77,49 +72,61 @@ Here’s a breakdown of the dataset fields:
 | 44           | 6             | 210                   |
 | 45           | 0             | 0                     |
 
-### **Data Collection Process**
+---
 
-- The **study hours** for each day were tracked manually. I made sure to log the hours spent on studying every day. However, these hours were affected by various factors, such as **abroad travels** and particularly **school exam preparation**.
-- During **exam weeks**, which were the last 15 days of the 45-day period, my study hours and lines of code written were noticeably reduced. I had to focus more on my school exams, which meant less time available for coding practice.
-- On some days, I couldn’t study at all due to other personal commitments or exhaustion. In such cases, the study hours were recorded as **0**, and I wrote **0 lines of code** on those days.
+### **Code Overview**
 
-### **Project Plan**
+#### **Data Preprocessing**
+- **File:** `data_preprocessing.ipynb`
+- This script loads the raw dataset, explores its structure, and cleans the data for analysis.
+- Key Steps:
+  - Loading the dataset
+  - Generating basic statistics
+  - Saving the cleaned dataset for further analysis
 
-### 1. **Data Collection**
-   - Track daily study hours for 45 days.
-   - Note the number of lines of code written each day for my React project.
-   - Log any disruptions (like exams or travels) that affect study hours.
+#### **Exploratory Data Analysis (EDA)**
+- **File:** `eda.ipynb`
+- Key visualizations:
+  1. **Correlation Heatmap:** Shows the relationship between study hours and lines of code written.
+  2. **Box Plot:** Visualizes the distribution of lines of code for different study hours.
+  3. **Cumulative Line Plot:** Tracks cumulative study hours vs. cumulative lines of code written over 45 days.
+  4. **Scatter Plot:** Displays the direct relationship between study hours and lines of code.
 
-### 2. **Data Preprocessing**
-   - Clean and structure the data for analysis.
-   - Handle missing or inconsistent values where study hours may have been impacted by travel or other factors.
+#### **Modeling**
+- **File:** `mdoelling.ipynb`
+- Linear regression was applied to predict lines of code written based on study hours.
+- Key Steps:
+  - Splitting the dataset into training and test sets
+  - Training a linear regression model
+  - Evaluating the model with an R² score
+  - Saving the trained model for future use
 
-### 3. **Exploratory Data Analysis (EDA)**
-   - Visualize the relationship between `Hours Studied` and `Lines of Code Written` using scatter plots.
-   - Calculate the **correlation coefficient** to quantify the relationship.
-   - Explore trends in study patterns, especially the effect of exam weeks on progress.
+#### **Regression Visualization**
+- **File:** `visualization.ipynb`
+- A scatter plot with the regression line was created to visualize the model’s fit and include the R² score on the graph.
 
-### 4. **Modeling and Prediction**
-   - Apply **linear regression** to model the relationship between `Hours Studied` and `Lines of Code Written`.
-   - Predict the number of lines of code written for a given study time using the regression model.
-   - Evaluate the model’s performance and refine it if necessary.
+---
 
-### 5. **Visualization and Reporting**
-   - Create interactive visualizations using libraries like **Matplotlib** or **Seaborn** to present the findings.
-   - Summarize insights and conclusions about the effectiveness of study hours on writing code, particularly during exam weeks.
+### **Limitations and Future Work**
 
-### 6. **Next Steps**
-   - Expand the dataset to include more days or additional features like study type (e.g., theory vs. practice).
-   - Explore machine learning models to predict future progress based on past study patterns.
+- **Limitations:**
+  - The dataset covers only 45 days, which may not capture long-term trends.
+  - The analysis assumes a linear relationship, potentially overlooking non-linear patterns.
+  - Exam weeks and travel disruptions affected consistency in study hours.
 
-### **Dependencies**
+- **Future Work:**
+  - Collect a larger and more detailed dataset, including study type (e.g., theory vs. practice).
+  - Use advanced formulas and methods to generate more detailed visualizations.
+  - Develop a more robust React app integrating libraries like **GLVis** to analyze and visualize data dynamically, with backend code for handling complex workflows.
 
-- **Pandas**: For data manipulation and structuring.
-- **Numpy**: For generating random numbers.
-- **Matplotlib / Seaborn**: For data visualization.
+---
+
+### **Technologies Used**
+- **Python**: For data analysis, visualization, and modeling.
+- **Pandas / NumPy**: For data manipulation.
+- **Matplotlib / Seaborn**: For visualizations.
 - **Scikit-learn**: For linear regression modeling.
+- **Joblib**: For saving and loading trained models.
 
-### **Conclusion**
-
-By analyzing the relationship between study time and the number of lines of code written for my React project, this project provides insights into the effectiveness of consistent study habits and highlights the impact of interruptions (like school exams or travels). With these findings, I aim to develop strategies for more efficient learning, helping others improve their coding skills over time.
+---
 
